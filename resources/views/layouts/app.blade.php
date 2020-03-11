@@ -83,7 +83,7 @@
           <div class="row">
               <div class="col-12 col-sm-6">
                   <div class="col-12">
-                      <a class="navbar-brand text-light" style="font-family: 'Alata', sans-serif;" href="{{ route('home') }}">
+                      <a class="navbar-brand text-light" style="font-family: 'Alata', sans-serif;" href="{{ url('/') }}">
                           <img class="my-2" src="{{ asset('images/logo.png') }}" width="30" height="30" alt="LOGO">
                           DINAMITA</a>
                   </div>
@@ -105,11 +105,11 @@
                 
                   <div class="col-12">
                    
-                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="">
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="{{ url('/') }}">
                                   Home</a>
                   </div>
                   <div class="col-12">
-                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="">
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="{{ url('/preguntas') }}">
                                   FAQ</a>
                   </div>
                   <div class="col-12">

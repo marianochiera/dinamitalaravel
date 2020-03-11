@@ -34,3 +34,4 @@ Route::resource('preguntas', 'PreguntasController');
 Route::resource('contactos', 'ContactosController');
 
 
+
