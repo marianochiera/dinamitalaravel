@@ -29,6 +29,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('preguntas', "PreguntasController");
+//Route::get('/preguntas', 'PreguntasController@index');
+Route::resource('preguntas', 'PreguntasController');
 
 
