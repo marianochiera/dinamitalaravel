@@ -77,4 +77,51 @@
         </main>
     </div>
 </body>
+<footer class="mt-3">
+    <div style="background: rgb(31, 31, 31) none repeat scroll 0 0" class="container-fluid py-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 col-sm-6">
+                  <div class="col-12">
+                      <a class="navbar-brand text-light" style="font-family: 'Alata', sans-serif;" href="{{ route('home') }}">
+                          <img class="my-2" src="{{ asset('images/logo.png') }}" width="30" height="30" alt="LOGO">
+                          DINAMITA</a>
+                  </div>
+                  <div class="col-12 text-light">
+                    El comercio electrónico, también conocido como e-commerce​ o bien comercio por Internet o comercio en línea, consiste en la compra y venta de productos o de servicios a través de medios electrónicos, tales como redes sociales y otras páginas web.
+                  </div>
+                  <div class="col-12 text-secondary">
+                      email: contacto@dinamita.com
+                  </div>
+                  <div class="col-12 text-secondary">
+                      telefono: 3415555555
+                  </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                  <div class="col-12 text-light">
+                          <a class="navbar-brand text-light" style="font-family: 'Alata', sans-serif;">
+                                  Informacion</a>
+                  </div>
+                
+                  <div class="col-12">
+                   
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="">
+                                  Home</a>
+                  </div>
+                  <div class="col-12">
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="">
+                                  FAQ</a>
+                  </div>
+                  <div class="col-12">
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="{{ route('register') }}">
+                                  Registro</a>
+                  </div>
+                  <div class="col-12">
+                          <a class="navbar-brand text-secondary" style="font-family: 'Alata', sans-serif;" href="{{ route('login') }}">
+                                  Login</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+</footer>
 </html>
