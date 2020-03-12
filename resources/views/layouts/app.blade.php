@@ -21,9 +21,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="fixed-top navbar navbar-expand-md navbar-light bg-white shadow-sm ">
+            
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img class="my-2" src="{{ asset('images/logo.png') }}" width="30" height="30" alt="LOGO">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -64,8 +66,15 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
+                                    @if (Auth::user()->role == "1")
+                                    <a class="dropdown-item" href="{{ url('/admin') }}">Panel de Administrador
+                                 </a>  
+                                    @endif
+                                        
+                                   
+                                    
+                                </div>                           
+                            </li>                    
                         @endguest
                     </ul>
                 </div>

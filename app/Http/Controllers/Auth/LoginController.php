@@ -37,4 +37,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function authenticated($request , $user){
+        if($user->role =='1'){
+            return view('admin.dashboard') ;
+        }else{
+            return  view('perfil');
+        }
+}
 }
