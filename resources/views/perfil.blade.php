@@ -63,7 +63,8 @@
             </div>
         </div>
         <div class="col-lg-4 order-lg-1 text-center">
-            <img src="img/perfil.jpg" style="border-radius: 50%; width: 150px; height: 150px;" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+            
+            <img src="{{ Auth::user()->avatar }}" style="border-radius: 50%; width: 150px; height: 150px;" class="mx-auto img-fluid img-circle d-block" alt="avatar">
             <label class="custom-file">
                 <input type="file" id="file" class="custom-file-input">
                 <button class="btn"><span class="custom-file-control">Elegir foto</span></button>
