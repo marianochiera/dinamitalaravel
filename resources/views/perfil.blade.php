@@ -63,12 +63,30 @@
             </div>
         </div>
         <div class="col-lg-4 order-lg-1 text-center">
+            <form action="{{ route('perfil.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <label for="avatar" class="col-md-4 col-form-label text-md-right">avatar</label>
+
+                <div class="col-md-6">
+                    <input id="avatar" type="file" class="form-control @error('avatar') is-invalid @enderror" name="avatar"
+                        value="{{ old('avatar') }}" required autocomplete="avatar" autofocus>
+
+                    @error('avatar')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+                <div class="form-group row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="btn btn-primary">
+                            agregar avatar
+                        </button>
+                    </div>
+                </div>
             
-            <img src="{{ Auth::user()->avatar }}" style="border-radius: 50%; width: 150px; height: 150px;" class="mx-auto img-fluid img-circle d-block" alt="avatar">
-            <label class="custom-file">
-                <input type="file" id="file" class="custom-file-input">
-                <button class="btn"><span class="custom-file-control">Elegir foto</span></button>
-            </label>
+            
+            </form>
         </div>
     </div>
 
