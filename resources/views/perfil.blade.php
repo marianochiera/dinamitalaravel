@@ -63,8 +63,12 @@
             </div>
         </div>
         <div class="col-lg-4 order-lg-1 text-center">
+            
+            <img src="{{ asset('storage/auth()->user()->avatar"') }}" alt="asd">
+        
             <form action="{{ route('perfil.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                
                 <label for="avatar" class="col-md-4 col-form-label text-md-right">avatar</label>
 
                 <div class="col-md-6">

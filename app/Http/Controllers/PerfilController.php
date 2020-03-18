@@ -19,12 +19,14 @@ class PerfilController extends Controller
         return view('perfil');
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $request= User::all();
+        
         $ruta_archivo = request()->file('avatar')->store('public');
-        $request->auth()->user()->update(['avatar' => basename($ruta_archivo)]);
+        auth()->user()->update(['avatar' => basename($ruta_archivo)]);
             
-        return redirect()->route('perfil')->with(['status'=> "Se agrego la avatar Correctamente"]);
+        return redirect()->route('perfil.index')->with(['status'=> "Se agrego la avatar Correctamente"]);
     }
+    
+    
 }
